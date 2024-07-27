@@ -29,9 +29,8 @@ public class FileProcessor {
                 writer.write(processedLine);
                 writer.newLine();
             }
-            System.out.println("Processing complete. Results written to " + outputFilePath);
         } catch (IOException e) {
-        }
+            }
     }
 }
 
