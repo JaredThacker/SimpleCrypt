@@ -20,7 +20,7 @@ public class FileProcessor {
 
         try {
             BufferedReader reader = new BufferedReader(new FileReader(inputFilePath));
-            BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))
+            BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath));
             String line;
             while ((line = reader.readLine()) != null) {
                 String processedLine = processor.processLine(line);
