@@ -18,10 +18,9 @@ public class FileProcessor {
         String outputFilePath = "sonnet18.enc";
         LineProcessor processor = new LineProcessor();
 
-        try (
-                BufferedReader reader = new BufferedReader(new FileReader(inputFilePath));
-                BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))
-        ) {
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(inputFilePath));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))
             String line;
             while ((line = reader.readLine()) != null) {
                 String processedLine = processor.processLine(line);
@@ -29,8 +28,7 @@ public class FileProcessor {
                 writer.write(processedLine);
                 writer.newLine();
             }
-        } catch (IOException e) {
-            }
+        } catch (IOException e) {System.out.println("File not found");}
     }
 }
 
