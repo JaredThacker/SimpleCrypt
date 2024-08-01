@@ -43,8 +43,6 @@ public class ROT13 {
         StringBuilder rotated = new StringBuilder();
         String rightHalf = s.substring(s.indexOf(c));
         String leftHalf = s.substring(0, s.indexOf(c));
-        rotated.append(rightHalf);
-        rotated.append(leftHalf);
-        return rotated.toString();
+        return rotated.append(rightHalf).append(leftHalf).toString();
     }
 }
